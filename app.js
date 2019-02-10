@@ -23,16 +23,16 @@ var budgetController = (function(){
     this.description = description;
     this.value = value;
   };
-
-	var calculateTotal = function(type) {
+  
+  var calculateTotal = function(type) {
 		var sum = 0;
 		data.allItems[type].forEach(function(currentItem){
 			sum += currentItem.value;
 		});
 		data.totals[type] = sum;
-	};
-
-	var data = {
+  };
+  
+  var data = {
 		allItems: {
 			exp: [],
 			inc: []
@@ -43,9 +43,9 @@ var budgetController = (function(){
 		},
 		budget: 0,
 		percentage: -1
-	};
-
-	return {
+  };
+  
+  return {
 		addItem: function(type, des, val) {
       var newItem, ID;
 
